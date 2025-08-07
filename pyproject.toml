@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wik-notes" # Package name (used for PyPI/pip install)
+dynamic = ["version"]# Version is dynamically fetched (from __version__.py)
+authors = [
+    { name = "Lokeshwar Lakhi", email = "lokeshwarlakhi@gmail.com" }
+]# Author info (for PyPI)
+description = "AI-powered TUI note-taking application"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text="MIT"}
+dependencies = [
+    "textual>=0.36.0",
+]
+
+[project.scripts] # Defines CLI entry points.
+wik-notes = "wik.app:main"# Creates a `wik-notes` command that runs `main()` in `wik/app.py`
+
+[tool.setuptools]#Configures setuptools-specific behavior.
+package-dir = {"" = "src"}# Root package is in the `src/` directory
+# package-dir: Maps the root package ("") to the src/ folder.
+# Without this, setuptools might not find your code.
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Look for packages in `src/`
+
+[tool.setuptools.dynamic]
+version={attr="wik.__version__.__version__"}

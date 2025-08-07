@@ -1,0 +1,11 @@
+Sidebar {
+    /* background: darkblue; */
+    padding: 2 2 1 2;
+    dock: left;
+    width: 20%;
+    height: 100%;
+}
+
+Sidebar.-hidden {
+        display: none;
+}
