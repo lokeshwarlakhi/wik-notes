@@ -13,9 +13,10 @@ class Sidebar(Container):
 class WikNotes(App):
     """AI-powered note-taking TUI."""
     CSS_PATH = "app.css"
-    BINDINGS = [("ctrl+q", "quit", "Quit"),
-                ("ctrl+b","toggle_sidebar","Toggle Sidebar"),
-            ]
+    BINDINGS = [
+        ("ctrl+b","toggle_sidebar","Toggle Sidebar"),
+        ("ctrl+q", "quit", "Quit"),
+        ]
 
     def compose(self) -> ComposeResult:
         yield Header()
