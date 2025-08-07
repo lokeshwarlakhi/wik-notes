@@ -8,7 +8,7 @@ class NoteTaker(App):
 
     def compose(self) -> ComposeResult:
         yield Header()
-        yield TextArea(id="editor")
+        yield TextArea(id="notepad")
         yield Footer()
 
     def on_mount(self) -> None:
