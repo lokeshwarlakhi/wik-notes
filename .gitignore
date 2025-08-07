@@ -5,4 +5,3 @@ __pycache__/
 *.egg-info/
 notes.txt
 test.py
-.bumpversion.cfg
